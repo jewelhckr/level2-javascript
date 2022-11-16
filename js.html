@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en ">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./Bloody.css">
+        <title>JAVSCRIPT CLASS</title>
+    </head>
+    <body style="background-color: gray;">
+
+        <button onclick="playMusic()">Play >>></button>
+     <!-- <h1 style="text-align: center; font-size: 20pt;">CALCULATOR</h1>
+     <input type="text" name="" id="firstNo" placeholder="Enter your first no...." style="height: 8vh; padding: 5px;">
+     <input type="text" name="" id="secondNo" placeholder="Enter your second no...." style="height: 8vh; padding: 5px;">
+     <br><br>
+     <button style="background-color: blue; color: white; padding: 10px; border-radius: 10px;" onclick="add()">ADD</button>
+     <button style="background-color: green; color: white; padding: 10px; border-radius: 10px;" onclick="subtract()">SUBTRACT</button>
+     <button style="background-color: yellow; color: black' ; padding: 10px; border-radius: 10px;" onclick="divide()">DIVIDE</button>
+     <button style="background-color: red; color: white; padding: 10px; border-radius: 10px;" onclick="multiply()">MULTIPLY</button>
+
+     <p id="result" style="font-size: 50pt; text-align: center; color: black"></p> -->
+
+     <!-- <section style="background-color: black; border: 5px solid aqua; height: 95vh; width: 100vh;
+        margin-left: 40vh; border-radius: 20px;">
+
+            <h1 style="text-align: center; font-size: 30pt;">GRADING SYSTEM</h1>
+        <div style="margin-left: 30vh; margin-top: 20vh;">
+            <input type="text" placeholder="Please provide your score..." id="scoreInput" 
+        style="border: 2px solid aqua; border-radius: 5px; height: 50px;">
+        <button style="font-size: 20pt; background-color: black; color: aquamarine; 
+        padding: 15px; border: 2px solid aquamarine; border-top-right-radius: 20px; border-bottom-left-radius: 20px;" onclick="grade()">
+         GRADE
+        </button>
+        </div>
+        <p id="result" style="font-size: 50pt; text-align: center"></p> -->
+   
+        <!-- INNERTEXT -->
+
+        <div id="disp"></div>
+
+
+        <script>
+              var myAge = 30
+              var myName = "Jewel"
+
+              disp.innerHTML =`
+              <h1> I am ${myAge} years Old </h1>
+              <h1> My name is ${myName} </h1>
+              `
+        </script>
+         
+       
+        <!-- <div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Dignissimos necessitatibus quisquam mollitia consequatur 
+            laborum unde nisi illo et, veniam magni cupiditate distinctio 
+            ipsam neque eligendi? Soluta iure architecto recusandae id.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Aliquid, fugit mollitia? Voluptatibus quod autem culpa corporis. 
+            Sapiente, nobis! Quas nihil ad cupiditate reiciendis accusamus fuga 
+            ex distinctio vero exercitationem repellendus!
+        </div>
+
+        <p id="myText">
+        
+        </p>
+        <p id="secondText"></p>
+        <input type="text" value="lorem" id="inp">
+        <input type="text" name="" id="">
+         -->
+        
+        
+        
+
+
+
+
+
+<script src="output.js"></script>
+
+
+     <!-- CALCULATOR SCRIPT -->
+
+
+    <!-- <script>
+
+     function add() {
+        var first_num = firstNo.value;
+        var second_num = secondNo.value;
+        var total = Number(first_num) + Number(second_num);
+        result.innerText = total;
+     }
+
+     function subtract() {
+        var first_num = firstNo.value;
+        var second_num = secondNo.value;
+        var total = Number(first_num) - Number(second_num);
+        result.innerText = total;
+     }
+
+     function divide() {
+        var first_num = firstNo.value;
+        var second_num = secondNo.value;
+        var total = Number(first_num) / Number(second_num);
+        result.innerText = total;
+     }
+
+     function multiply() {
+        var first_num = firstNo.value;
+        var second_num = secondNo.value;
+        var total = Number(first_num) * Number(second_num);
+        result.innerText = total;
+     }
+
+    </script> -->
+
+        <!-- <script>
+             alert, innerText, innerHTML, value, console          
+            
+            alert("Hello World");
+            alert(2 + 2);
+            myText.innerText = "Hello World";
+            secondText.innerHTML = "<b><i>Hello Heritage<i/><b/>";
+            secondText.style.backgroudColour = "green"ss'
+            inp.value = "Hello World";
+            console.log(inp.value)
+            </script> -->
+
+            <script>
+                // var name = "Honey";
+                // var age = "";
+                // var Name_Of_School = "SQI"; 
+
+                // var score = 20;
+
+                
+                // function grade () {
+                //     // var score = prompt("Input Number");
+                //     var score = scoreInput.value;
+                //     if (score <= 20){
+                //         result.innerText = "FAIL ! ! ! 🤦🏽‍♀️🤦🏽‍♀️🤦🏽‍♀️";
+                //         result.style.color = "red";
+                //     } else if (score == 20) {
+                //         result.innerText = "FAIR 😒";
+                //         result.style.color = "pink";
+                //     }  else if (score <= 30) {
+                //         result.innerText = "TRY MORE 😏";
+                //         result.style.color = "pink";
+                //     } else if (score <= 50) {
+                //         result.innerText = "AVERAGE 😊";
+                //         result.style.color = "orange";
+                //     } else if (score <= 60) {
+                //         result.innerText = "GOOD 😁";
+                //         result.style.color = "blue";
+                //     } else if (score <= 90) {
+                //         result.innerText = "EXCELLENT 🤩";
+                //         result.style.color = "green";
+                //     } else if (score == 100) {
+                //         result.innerText = "PERFECT SCORE ! ! ! 🥳";
+                //         result.style.color = "yellow";
+                //     } else  {
+                //             result.innerText = "Invalid Command ! ! ! 😑";
+                //             result.style.color = "red";
+                //         }
+                        
+                //     }   
+                    
+            //    18 = "You are now an Adult"
+            //    below 18 = "You are premature"
+            //    above 18 = "You're an adult"
+
+            // if (age == 18) {
+            //     alert("You are now an Adult")
+            // } else if (age < 18) {
+            //     alert("You are premature")
+            // } else if (age > 18) {
+            //     alert("You're an adult")
+            // } else {
+            //     alert(" ('-') ")
+            // }        
+                
+            //     if (name == "Jewel") {
+            //        alert("You are correct");
+            //     } else {
+            //         alert("You are not correct")
+            //     }
+
+            </script>
+
+            <!-- <script>
+             var userNum = prompt()
+             if(userNum==2 || userNum==3){
+                alert("Prime Number")
+             } else if(userNum%1==0&& userNum%userNum==0&&userNum%2 !==0&& userNum%3 !==0){
+                alert("Prime Number")
+             }
+
+            </script> -->
+            <!-- </section> -->
+
+    </body>
+</html>

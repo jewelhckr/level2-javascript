@@ -1,0 +1,137 @@
+- Rules of the class
+1. No lateness
+2. No distractions
+3. Always ask questions
+4. If you don't understand
+5. No excuses for not attempting assignments
+6. Whatever is not taught should not be in your code 
+7. Sacrifice
+
+DATA TYPES
+-Number - 1,2,3,4,3.142,9.8,-90
+  *Integer (20, 5, 18, etc.), Float, Double
+- String - "Glory", 'Heritage', "Jewel", 'Michael', "Jared"...
+
+-Boolean - true, false
+-Objects
+-Arrays
+
+
+typeof("Jewel")
+
+ARITHMETIC OPERATORS
++ Addition 
+- Subtraction
+* Multiplication
+/ Division
+% Modulus
+** Raise to the power of...
+
+
+++ - addition/concatenation 
+
+
+OUTPUT COMMANDS
+alert()
+
+
+VARIABLES
+They are like a form of storage/containers for data
+= Assignment Operator
+
+Rule for naming variables
+- Spaces are not allowed... var my name = "Jewel" X
+- You shouldn't start with numbers 
+- Stay away from special characters... ! @ # $ % etc
+- Follow naming coventions
+
+NAMING CONVENTIONS
+snake_casing: my_name
+PascalCasing: MyName
+camelCasing: myNameInSpanish
+
+
+prompt()
+
+
+Assignment
+- What is the diff btw float and double?
+- Practice everything we've done today 😁
+- Checkout conditional statements in JavaScript 😏
+
+09/11/2022
+
+CONDITIONAL STATEMENTS
+- if
+- else if
+- else
+
+COMPARISON OPERATORS
+= Assignment operator 
+== Equal to // The value
+=== Exactly equal to // The value and the data-type
+
+>
+<
+>=
+<=
+
+Write a conditional statement that checks gender 
+if gender is male = na ma you be
+if gender is female = the gender that gave apple to  Adam
+if gender is anything else = depart from me for i know you not
+
+Algorithm that checks if a number is an even number
+if even, display even number
+else, display not an even number
+
+LOGICAL OPERATORS
+OUTPUT COMMANDS (DOCUMENT OBJECT MODEL)
+
+ASSIGNMENT
+Write an algorith to check for:
+- Odd number
+- Prime number
+Fizz Buzz:
+if the number is divisible by 3, it displays Fizz
+if the number is divisible by 5, it displays Buzz
+if the number is divisible by 3 and also divisible by 5, it displays Fizz-Buzz
+
+
+
+LOGICAL OPERATORS
+And &&  // All conditions must be true, to return true
+Or ||   // At least one condition needs to be true
+Not !   // Opposite
+
+DRY - Don't Repeat Yourself
+
+ASSIGNMENT
+- Grading System
+0-39 F
+39-44 E
+45-49 D
+50-59 C
+60-69 B
+70-100 A+
+-3 INVALID
+"String" INVALID
+
+- Prime Number 
+- Currency Converter
+
+ASSIGNMENT
+- All previous assignments but with output COMMANDS
+
+14/11/2022
+Assignment Operators (+=, -=, *=, %=)
+Increment and Decrement (--, ++)
+Output Commands
+       - Coonsole Log
+       - Editable 
+
+15/11/2022
+Audio class
+
+
+LOOPS

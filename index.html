@@ -1,21 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Git 2</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JAVA SCRIPT</title>
 </head>
-<style>
+<!-- <style>
   h1 {
     color: blue;
   }
-</style>
-<body>
-    
-  <h1 align="center">Hello World 💎</h1>
 
-  <h2>Omooooo</h2>
+  h2 {
+    color: gray;
+  }
+</style> -->
+
+<body>
+
+  <button onclick="fizzBuzz()">Check Fizz-Buzz</button>
+  <!-- 
+
+  <h1>Hola!</h1>
+  <h1>Hola!</h1>
+  <h1>Hola!</h1> -->
+
+  <script>
+    // alert(478);
+    // alert(false);
+    // alert(typeof(true));
+    // alert(2**3);
+    // var myName = "Jewel 💎"
+    // alert(myName);
+
+
+    function fizzBuzz() {
+      var userResponse = prompt("Input Number");
+      if (userResponse % 3 == 0 && userResponse % 5 == 0) {
+        alert("Fizz-Buzz");
+      } else if (userResponse % 3 == 0) {
+        alert("Fizz");
+      } else if (userResponse % 5 == 0) {
+        alert("Buzz");
+      } else {
+        alert("This input is invalid!")
+      }
+    }
+
+    // To trigger a function
+    fizzBuzz()
+    test(){
+      prompt("Input currency")
+    }
+  </script>
 
 </body>
+
 </html>
