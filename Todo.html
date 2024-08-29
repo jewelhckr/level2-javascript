@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./bootstrap-5.2.2-dist/css/bootstrap.css">
+    <title>To-Do List</title>
+</head>
+<body>
+    <input type="text" placeholder="Enter an item..." id="index" class="form-control my-2">
+    <button class="btn btn-info w-100 my-2" onclick="addTodo()">Add To-do</button>
+    <button onclick="deleteAllTodo()" class="btn btn-danger w-100 my-2">Delete All</button>
+
+    <!-- <button class="btn btn-warning w-100 my-2" onclick="displayTodo()">Display To-Do</button>
+    <button class="btn btn-danger w-100 my-2" onclick="deleteTodo()">Delete To-Do</button> -->
+    <hr>
+    <div id="output"></div> 
+
+    <!-- if(userInput.value == ""){
+        alert("Please type something.")
+     }else{ -->
+
+    <script>
+    var allTodo = []
+        function addTodo(){
+                allTodo.push(index.value)
+                console.log(allTodo)
+                // output.innerHTML = allTodo
+                index.value = ""
+                displayTodo()
+             }
+        
+        function displayTodo(){
+            // alert("Works")
+            output.innerHTML = ""
+            for (let index = 0; index < allTodo.length; index++) {
+                console.log(allTodo[index])
+                    output.innerHTML += `
+                    <h1>${allTodo[index]} ${index}</h1>
+                    <button onclick="deleteTodo(${index})" class="btn btn-danger my-2">Delete To-Do</button>
+                    <button onclick="editTodo(${index})" class="btn btn-warning my-2">Edit To-Do</button>
+                    `
+                }
+                index.value = ""
+             }
+
+        function editTodo(user){
+            // var userIndex = prompt("Enter the index you wanna change.")
+            var replacement = prompt("What do you want to replace it with? 🤔")
+            if(!replacement){
+                alert("You think sey you dey wise? 🙄")
+                displayTodo(user)
+            }else{
+                allTodo.splice(user,1,replacement)
+                displayTodo()
+            }
+        }
+            
+           // Truthy or Falsy
+    </script>
+</body>
+</html>

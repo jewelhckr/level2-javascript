@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./bootstrap-5.2.2-dist/css/bootstrap.css">
+    <title>OBJECTS</title>
+</head>
+<body onload="displayStudents()">
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-9 mx-auto shadow-sm">
+                <h1 class="mx-auto">Sign Up Page</h1>
+                <input type="text" placeholder="Enter your First Name..." id="fName" class="my-2 mx-auto form-control">
+                <input type="text" placeholder="Enter your Last Name..." id="lName" class="my-2 mx-auto form-control">
+                <input type="text" placeholder="Enter your Email..." id="mail" class="my-2 mx-auto form-control">
+                <input type="text" placeholder="Enter your Password..." id="pass" class="my-2 mx-auto form-control">
+                <button class="btn btn-info w-100 my-2 mx-auto" onclick="signUp()">Sign Up</button>
+                <button class="btn btn-danger w-100 my-2 mx-auto" onclick="deleteAll()">Delete All Students</button>
+            </div>
+        </div>
+    </div>
+    <div id="editDiv">
+        
+    </div>
+
+    <div id="disp"></div>
+
+    <table border="1" class="table table-striped" id="myTable"></table>
+
+    
+
+    <script>
+        var allStudents = [
+            // {
+            //     firstName : "Ifeoluwa",
+            //     lastName : "Efiong",
+            //     email : "ifefiong@gmail.com",
+            //     password : "Tweedle-dee"
+            // },
+            // {
+            //     firstName : "Jewel",
+            //     lastName : "Hacker",
+            //     email : "jewelhckr@gmail.com",
+            //     password : "Tweedle-dum"
+            // }
+        ]
+
+        function signUp(){
+            if (fName.value=="" || lName.value=="" || mail.value=="" || pass.value==""){
+                alert("Kindly fill in all details")
+            } else{
+                var student = {
+                firstName : fName.value,
+                lastName : lName.value,
+                Email : mail.value,
+                Password : pass.value,
+            }
+                allStudents.push(student)
+                fName.value = ""
+                lName.value = ""
+                mail.value = ""
+                pass.value = ""
+                console.log(allStudents)
+            }
+            
+        }
+
+        function displayStudents(){
+            if(allStudents.length==0){
+                myTable.innerHTML = ""
+                disp.innerHTML = `<h1>
+                There are currently no Students
+            </h1>`
+            } else{
+                disp.innerHTML = ""
+                myTable.innerHTML += `
+                <tr>
+                    <th> S/N </th>
+                    <th> First Name </th>
+                    <th> Last Name </th>
+                    <th> Email </th>
+                    <th> Password </th>
+                    <th> Actions </th>
+                    </tr>
+                    `
+                }
+                
+                
+            for (let index = 0; index < allStudents.length; index++) {
+                    console.log(allStudents)
+                    myTable.innerHTML += `
+                <tr>
+                    <td>${index+1}</td>
+                    <td>${allStudents[index].firstName}</td>
+                    <td>${allStudents[index].lastName}</td>
+                    <td>${allStudents[index].email}</td>
+                    <td>${allStudents[index].password}</td>
+                    <td>
+                        <button class="btn btn-danger" onclick="deleteUser(${index})">Delete User</button>
+                        <button class="btn btn-warning" onclick="editUser(${index})">Edit User</button>
+                    </td>
+                </tr>
+                        `
+                // displayStudents()     
+                }
+                myTable.innerHTML = ""
+        }
+
+        function deleteAll(){
+            allStudents.splice(0)
+            console.log(allStudents)
+            displayStudents()
+        }
+
+        function deleteUser(userIndex){
+            // alert(userIndex)
+            allStudents.splice(userIndex,1)
+            displayStudents()
+        }
+
+        function editUser(userIndex){
+            console.log(allStudents[userIndex])
+            editDiv.innerHTML += `
+            <input type="text" placeholder="First Name">
+            <input type="text" placeholder="Last Name">
+            <input type="text" placeholder="Email">
+            <input type="text" placeholder="Password">
+            <button onclick="updateDetails()">Update Details</button>
+            `
+
+            // allStudents.splice(userIndex,1,'replacement')
+        }
+
+        function updateDetails(index){
+            allStudents.splice(index,1,{})
+        }
+        // var myTable = {
+        //     color:"Blue",
+        //     shape: "Spherical",
+        //     noOfStands: 2,
+        // }
+        // // Dot notation
+        // console.log(myTable.shape, myTable.color)
+        // // Bracket notation
+        // console.log(myTable["color"])
+
+        // var Oyin = {
+        //     name: "Jewel",
+        //     age : 20,
+        //     height: "10ft",
+        //     gender: "Prime",
+        //     talk: function(){
+        //         console.log("I can talk endlessly")
+        //     },
+        //     sports: function(){
+        //         console.log("I love to swim!")
+        //     },
+        // }
+        // console.log(Oyin.name, Oyin.gender)
+        // Oyin.sports()
+
+        // var student = {
+        //     firstName : "Ifeoluwa",
+        //     lastName : "Efiong",
+        //     email : "jewelhckr@gmail.com",
+        //     password : "Dumbo"
+        // }
+        // // Add an object
+        // student.age = 305
+        // // Edit an object
+        // student.firstName = "Jewel"
+        // console.log(student)
+
+    </script>
+</body>
+</html>

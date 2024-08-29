@@ -1,4 +1,12 @@
-/* button{
-    border-top-right-radius: 20px;
-    border-bottom-left-radius: 20px;
-} */
+button{
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 8px;
+    background-color: black;
+    color: aquamarine;
+}
+
+button:hover{
+    background-color: aquamarine;
+    color: black;
+    box-shadow: 30px;
+}

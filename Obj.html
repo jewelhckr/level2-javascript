@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./bootstrap-5.2.2-dist/css/bootstrap.css">
+    <title>SIGN UP PAGE</title>
+</head>
+<body class="bg-dark text-info">
+    <div class="container-fluid mt-5 w-75">
+        <div class="row">
+            <div class="col-9 form-control w-75 mx-auto shadow-sm bg-secondary">
+                <!-- <h1 class="mx-auto">Sign Up Page</h1> -->
+                <marquee class="h2" behavior="" direction="">💎 GEM STONE HIGH SCHOOL💎</marquee>
+                <input type="text" placeholder="Enter your First Name..." id="fn" class="my-2 mx-auto form-control">
+                <input type="text" placeholder="Enter your Last Name..." id="ln" class="my-2 mx-auto form-control">
+                <input type="text" placeholder="Enter your Email..." id="mail" class="my-2 mx-auto form-control">
+                <input type="password" placeholder="Enter your Password..." id="pass" class="my-2 mx-auto form-control">
+                <button class="btn btn-info w-100 my-2 mx-auto" onclick="signUp()">Sign Up</button>
+                <!-- <button class="btn btn-danger w-100 my-2 mx-auto" onclick="deleteAll()">Delete All Students</button> -->
+            </div>
+        </div>
+    </div>
+    <div id="editDiv">
+        
+    </div>
+
+    <div id="disp"></div>
+
+    <table border="1" class="table table-striped" id="myTable"></table>
+
+
+    <script>
+        var allStudents = []
+        if(localStorage.localStudents){
+            var oldData = JSON.parse(localStorage.getItem
+        ('localStudents'))
+        allStudents = oldData
+        } 
+
+
+        // var allStudents = oldData
+        console.log(allStudents)
+        function signUp(){
+             var student = {
+                firstName : fn.value,
+                lastName : ln.value,
+                email : mail.value,
+                password : pass.value,
+        }
+        allStudents.push(student)
+        localStorage.setItem('localStudents',JSON.stringify
+        (allStudents));
+        window.location.href = "Signin.html"
+    }
+    </script>
+</body>
+</html>

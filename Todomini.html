@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini To-Do List</title>
+</head>
+<body>
+    <input type="text" placeholder="Enter Your To-Do..." id="userInput">
+    <button onclick="addTodo()">Add To-Do</button>
+    <button onclick="editTodo()">Edit To-Do</button>
+    <button onclick="deleteTodo()">Delete To-Do</button>
+    <button onclick="deleteAllTodo()">Delete All To-Do</button>
+    
+
+
+
+    <script>
+        var allTodo = []
+        function addTodo(){
+            if(userInput.value == ""){
+                alert("Please type something.")
+             }else{
+                allTodo.push(userInput.value)
+                console.log(allTodo)
+             }
+             userInput.value = ""
+        }
+
+        function deleteTodo(){
+            allTodo.splice(0,allTodo.length - 1)
+            console.log(allTodo)
+        }
+
+        function deleteAllTodo(){
+            var userResponse = confirm("Are you sure? This action is irreversible!!!")
+            console.log(userResponse)
+            if(userResponse==true){
+                allTodo.splice(0, allTodo.length)
+                console.log(allTodo)
+            } else{
+                console.log("Oriyo e")
+                console.log(allTodo)
+            }
+           // Truthy or Falsy
+        }
+
+        function editTodo(){
+            var userIndex = prompt("Enter the index you wanna change.")
+            var replacement = prompt("What do you want to replace it with? 🤔")
+            if(userIndex==""){
+                alert("You think sey you dey wise? 🙄")
+            }else{
+           allTodo.splice(userIndex,1,replacement)
+           console.log(allTodo)
+            }
+        }
+        
+        
+        // Global variable
+        // var  balance = 1000   
+        // function withdraw(){
+        //     balance = balance - 500
+        //     console.log(balance)
+        // }
+        // function deposit(){
+        //     balance = balance + 500
+        //     console.log(balance)
+        // }
+    </script>
+</body>
+</html>

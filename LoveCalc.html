@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./bootstrap-5.2.2-dist/css/bootstrap.css">
+    <title>Love Calculator</title>
+</head>
+<body>
+ 
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-9 mx-auto shadow-lg">
+                <div class="h1 container-fluid shadow-sm mx-auto row col-7 my-4 border bg-dark border-danger 
+                border-3 bg-opacity-50 text-dark rounded p-2">❤ LOVE CALCULATOR ❤</div>
+                <input type="text" placeholder="Enter Your Name..." class="my-2 mx-auto form-control" id="yn">
+                <input type="text" placeholder="Enter Your Lover's Name..." class="my-2 mx-auto form-control" id="tn">  
+                <button class="btn btn-danger my-2 mx-auto w-100" onclick="calcLove()">Calculate Love Match </button>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div id="disp" class="h1 container-fluid mx-auto"></div>
+    
+    <script>
+        // Random Matric Nos
+        // Math.random only gives nos btw 0&1
+        function calcLove(){
+            var randomNumber = Math.round(Math.random()*100)
+            disp.innerHTML = `${randomNumber}%`
+            if(randomNumber < 30){
+                disp.innerHTML += `
+                <h1>Nah, forget about it. It ain't gonna work 🤷‍♀️</h1>
+                `
+            }else if(randomNumber<=40){
+                disp.innerHTML += `
+                <h1>Too low. Don't try it 🙅🏽‍♀️ </h1>
+                `
+            }else if(randomNumber<=60){
+                disp.innerHTML += `
+                <h1>This shouldn't be too bad... Right??? 😅😅😅</h1>
+                `
+            }else if(randomNumber<=80){
+                disp.innerHTML += `
+                <h1>Go ahead and give it a shot. 👍🏽</h1>
+                `
+            }else if(randomNumber<=100){
+                disp.innerHTML += `
+                <h1>Woohoo, I smell love in the air 🥳😘🥰</h1>
+                `
+            }
+            // else if(yn.value == "" || tn.value == ""){
+            //         disp.innerHTML += `
+            //     <h1>Please Input Both Names 🙄</h1>
+            //     `
+            yn.value = ""
+            tn.value = ""
+            // disp.innerHTML = ""
+        }
+        
+    </script>
+</body>
+</html>

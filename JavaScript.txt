@@ -43,7 +43,7 @@ Rule for naming variables
 - Spaces are not allowed... var my name = "Jewel" X
 - You shouldn't start with numbers 
 - Stay away from special characters... ! @ # $ % etc
-- Follow naming coventions
+- Follow naming conventions
 
 NAMING CONVENTIONS
 snake_casing: my_name
@@ -89,7 +89,7 @@ LOGICAL OPERATORS
 OUTPUT COMMANDS (DOCUMENT OBJECT MODEL)
 
 ASSIGNMENT
-Write an algorith to check for:
+Write an algorithm to check for:
 - Odd number
 - Prime number
 Fizz Buzz:
@@ -127,11 +127,72 @@ ASSIGNMENT
 Assignment Operators (+=, -=, *=, %=)
 Increment and Decrement (--, ++)
 Output Commands
-       - Coonsole Log
+       - Console Log
        - Editable 
 
 15/11/2022
 Audio class
 
 
-LOOPS
+2D LOOPS
+
+ASSIGNMENT
+1. First let it work in console.
+2. Do for Addition, Subtraction, Multiplication, and Division.
+3. Approximate the answers in Division to 2 decimal places.
+4. Start with buttons then try out select and options.
+
+Parameterized Functions
+
+24/11/2022
+Objects are variables
+- They contain a list of items
+- Describe more about a particular  variable
+- Properties and Methods
+- Curly braces, squiggly brackets
+- Key:value pair
+
+Access
+- dot notation
+- bracket notation
+
+Properties are what you use to describe that objects Features, Characteristics
+
+Methods : What the objects can do
+
+mytTable = {
+    stands : 2,
+    color : "white",
+    shape : "rectangular"
+}
+
+myPhone = {
+    noOfCams : 4,
+    chargingPortType : "Type C",
+    color : "leaf green",
+
+}
+
+ASSIGNMENT
+- Difference btw Dot and Bracket notation
+- Complete the sign up page
+- To-Do Pro
+
+29/11/2022
+Persistent dataThree tier architecture
+
+Client Tier - Frontend/Client Side Programming
+Server and Database - Backend/Server-Side Programming
+
+Local Storage 
+        - Persistent data stored in browser
+        - Browser-only Access
+        - Local storage methods
+        - Configured to store strings
+        - JSON - JavaScript Object Notation
+        - JSON and JSON Methods
+        - Conditional Statements on empty
+        - Ternary Operators
+
+01/12/2022
+Date Objects

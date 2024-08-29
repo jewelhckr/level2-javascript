@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./bootstrap-5.2.2-dist/css/bootstrap.css">
+    <title>SIGN IN PAGE</title>
+</head>
+<body class="bg-dark text-info">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-9 mx-auto shadow-sm">
+                <!-- <h1 class="mx-auto">Sign Up Page</h1> -->
+                <marquee behavior="" direction="">💎 GEM STONE HIGH 💎</marquee>
+                <!-- <input type="text" placeholder="Enter your First Name..." id="fName" class="my-2 mx-auto form-control">
+                <input type="text" placeholder="Enter your Last Name..." id="lName" class="my-2 mx-auto form-control"> -->
+                <input type="email" placeholder="Enter your Email..." id="mail" class="my-2 mx-auto form-control">
+                <input type="password" placeholder="Enter your Password..." id="pass" class="my-2 mx-auto form-control">
+                <button class="btn btn-info w-100 my-2 mx-auto" onclick="signIn()">Sign In</button>
+                <!-- <button class="btn btn-danger w-100 my-2 mx-auto" onclick="deleteAll()">Delete All Students</button> -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var allStudents = JSON.parse(localStorage.getItem
+        ('localStudents'))
+        var userIndex = localStorage.getItem('currentUserIndex')
+        console.log(allStudents[userIndex])
+
+        function signIn(){
+            
+            var userEmail = mail.value
+            var userPassword = pass.value
+            var found = false
+            for (let index = 0; index < allStudents.length; index++) { 
+                if(allStudents[index].email==userEmail && allStudents[index].password==userPassword){
+                    localStorage.setItem('currentUserIndex',index)
+                    found = true
+                    break; // To stop the for-loop
+                }
+            }
+            if(found==true){
+                alert("Correct")
+            } else{
+                alert("Incorrect Details")
+            }
+        window.location.href = "Dashboard.html"
+        }
+
+        
+    </script>
+</body>
+</html>

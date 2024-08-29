@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./bootstrap-5.2.2-dist/css/bootstrap.css">
+    <title>Student Dashboard</title>
+</head>
+<body class="bg-secondary">
+
+    <div class="h1 container-fluid shadow-sm mx-auto row col-9 my-4 border bg-dark border-primary 
+    border-3 bg-opacity-50 rounded p-3 text-info" id="disp"></div>
+    <hr>
+    <table border="1" class="table table-striped" id="myTable">
+        <tr>
+          <th> S/N </th>
+          <th> First Name </th>
+          <th> Last Name </th>
+          <th> Email </th>
+          <th> Password </th>
+          <th> Actions </th>
+        </tr>
+    </table>
+    <button class="btn btn-primary my-2 border border-2 p-1" onclick="back()">Back To Sign-Up Page</button>
+    
+
+<script>
+    var allStudents = JSON.parse(localStorage.getItem
+    ('localStudents'))
+
+    var userIndex = localStorage.getItem('currentUserIndex')
+    console.log(userIndex) 
+    disp.innerHTML +=
+    `
+    <h1>Welcome to your Portal, ${allStudents[userIndex].lastName} ${allStudents[userIndex].firstName}.</h1>
+    `
+    myTable.innerHTML += `
+    <tr>
+        <td>${userIndex+1}</td>
+        <td>${allStudents[userIndex].firstName}</td>
+        <td>${allStudents[userIndex].lastName}</td>
+        <td>${allStudents[userIndex].email}</td>
+        <td>${allStudents[userIndex].password}</td>
+        <td>
+            <button class="btn btn-danger border border-2" onclick="deleteUser(${userIndex})">Delete User</button>
+            <button class="btn btn-warning border border-2" onclick="editUser(${userIndex})">Edit User</button>
+        </td>
+    </tr>
+
+        `     
+    function back(){
+    window.location.href = "index.html"
+    }
+</script>
+</body>
+</html>

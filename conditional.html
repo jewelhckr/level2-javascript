@@ -4,35 +4,64 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./bootstrap-5.2.2-dist/css/bootstrap.css">
     <title>JS</title>
 </head>
 <body>
+    <!-- <div class="container-fluid form-control w-50 p-2 mt-5 bg-secondary">
+        <h1 class="mx-auto">DETAILS</h1>
+        <input class="form-control mt-3" type="text" placeholder="Input Gender..." id="gender">
+        <input class="form-control mt-3" type="number" placeholder="Input Age" id="age">
+        <button class="btn btn-info form-control mt-3" onclick="result()">Enter</button>
+        <div class="mx-auto p-3 my-2" id="disp"></div>
+    </div> -->
+    <h1 id="disp" class="mt-5 container-fluid"></h1>
     
    <script>
-    // var myGender = "Female";
-    // if(myGender=="Female"){
-    //     alert("You be woman 😁")
-    // } else if(myGender=="Male"){
-    //     alert("GET OUTTA HERE!!! YOU'RE A DUDE!!! 😠")
-    // } else{
-    //     alert("I knoweth thy not!!! 😒😤")
+    var myAge = 19;
+    var response = ""
+    // function result(){
+        // if(gender=="Female" && age >= 18){
+        //     disp.innerHTML +=
+        //     `
+        //     <h1>Welcome Dearest! 🥰</h1>
+        //     `
+        // } else{ disp.innerHTML +=
+        //     `
+        //     <h1>I knoweth thy not!!! 😒😤</h1>
+        //     `
+        // }
+        
     // }
+    // Tenary operators
+    // response = (myAge==18?"About to escape Teenagehood": "E get as e be O~o")
+    // Object Destructuring
+    
+    // var Joshua = {
+    //     firstname: "Joshua",
+    //     lastname: "Bamidele",
+    //     age: (980)
+    // }
+    // let (firstname,lastname,age) = Joshua
+    // disp.innerHTML +=
+    //         `
+    //         ${age}
+    //         `
+    // alert(response)
     // alert(2==="2")
-    var myAge = prompt("Input");
-    var myName = prompt("Input");
+    //  prompt("Input");
+    // // var myName = prompt("Input");
     // if(userResponse%2==1){
     //     alert("Odd number")
-    // } else{
+    // } else if{
     //     alert("Even number")
-    // } 
-    // if (userResponse%3==0) {
+    // } else if (userResponse%3==0) {
     //     alert("Fizz")
     // } else if(userResponse%5==0){
     //     alert("Buzz")
-    // } else{
+    // } else if{
     //     alert("Not a prime number.")
-    // }
-    // if(userResponse%3==1){
+    // } else if(userResponse%3==1){
     //    if(userResponse%5==0){
     // alert("Fizz-Buzz")
     // }
@@ -44,11 +73,11 @@
 
     // myName = "Jewel"
     // myAge = 20
-    if(myName=="Jewel" && myAge==20){
-        alert("Correct!");
-    } else{
-        alert("Wrong!");
-    }
+    // if(myName=="Jewel" && myAge==20){
+    //     alert("Correct!");
+    // } else{
+    //     alert("Wrong!");
+    // }
     </script>
 
 </body>
